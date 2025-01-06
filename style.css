@@ -149,7 +149,7 @@ body{
     flex-direction: column-reverse;
 }
 
-.page:nth-child(odd) {
+.page:nth-child(even) {
     align-self: flex-end;
 }
 
