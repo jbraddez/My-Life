@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #2d2d2d;
+}
+
+.logo{
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'DM Serif Text', serif;
+    font-weight: 600;
+}
+
+body{
+    text-align: center;
+    padding: 5px;
+    background: #fcfcfc;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100svh;
+}
+
+form{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: left;
+    gap: 12px;
+    aspect-ratio: 5/2;
+    border: 1px solid #2d2d2d;
+    background: linear-gradient(160deg, #fefefe 30%, #b1aeae 100%);
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+form input{
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #2d2d2d;
+}
+
+form input:focus{
+    outline: 1.3px solid #2d2d2d;
+}
+
+form button{
+    padding: 5px;
+    border-radius: 7px;
+    border: none;
+    background: #30e030;
+    width: 30%;
+    cursor: pointer;
+    align-self: center;
+    transition: 300ms ease-in-out;
+}
+
+form button:hover{
+    background: #2dea2d;
+}
+
+a:not(p a){
+    text-decoration: none;
+}
+
+p a:hover{
+    text-decoration: none;
+}
+
+.linkbutton{
+    padding: 8px;
+    color: #fefefe;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 7px;
+    border: 1px solid #2d2d2d;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 2px solid rgb(5, 6, 45);
+    transition: 300ms ease-in-out;
+}
+
+.linkbutton:hover{
+    padding: 10px;
+}

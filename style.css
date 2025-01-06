@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Trad:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100svh;
+    background-color: #f4e8c1; 
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Adds a paper texture */
+    background-repeat: repeat;
+    background-size: auto, 300px 300px;
+    background-blend-mode: multiply; 
+    color: #5c4033; 
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    font-size: 2.5rem;
+    font-family: 'DM Serif Text', serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, #8a5a44, #d6b07e); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: fit-content;
+    margin: 20px auto; 
+    border-bottom: 3px solid rgba(138, 90, 68, 0.4);
+    border-radius: 5px; 
+}
+
+
+.page {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 300px;
+    font-family: "Raleway", serif;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #f8f1d8; 
+    background-image: linear-gradient(#f5f5f0 1.1rem, #ccc 1.2rem);
+    background-size: 100% 1.2rem;
+    line-height: 1.2rem;
+    padding: 1.4rem 0.5rem 0.3rem 4.5rem;
+    margin: 5px;
+}
+  
+  .page::before,
+  .page::after {
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    width: 40%;
+    height: 10px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  .page::before {
+    left: 15px;
+    transform: skew(-5deg) rotate(-5deg);
+  }
+  
+  .page::after {
+    right: 15px;
+    transform: skew(5deg) rotate(5deg);
+  }
+  
+  .page:hover::before,
+  .page:hover::after {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+  }
+  
+  .margin {
+    position: absolute;
+    border-left: 1px solid #d88;
+    height: 100%;
+    left: 3.3rem;
+    top: 0;
+  }
+  
+  .page p {
+    margin: 0;
+    margin-top: -2px;
+    text-indent: 1rem;
+    padding-bottom: 1.2rem;
+    color: black;
+    line-height: 19px;
+  }
+
+  .date{
+    font-size: 0.9rem;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    max-height: 20px;
+  }
+
+  main{
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 30svh;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+#addNote{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.1rem; 
+    font-weight: bold;
+    color: #5c4033; 
+    background: linear-gradient(135deg, #d6b07e 50%, #98644c); 
+    border: 1px solid #8a5a44; 
+    border-radius: 8px; 
+    padding: 10px 20px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);   
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    display: inline-block;
+    background-size: 150%;
+    background-position: right;
+    margin-top: 30px;
+}
+
+#addNote:hover {
+    background-position: left;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%,-2px);
+}
+
+#addNote:active {
+    transform: translate(-50%,0);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notes{
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+.page:nth-child(odd) {
+    align-self: flex-end;
+}
+
+.save-btn, .delete-btn {
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #2d2d2d;
+    margin: 1px 5px;
+    cursor: pointer;
+}
+
+.save-btn{
+    background: #79e779;
+}
+
+.delete-btn{
+    background: #fa5151;
+}

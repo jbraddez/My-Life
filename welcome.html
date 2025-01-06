@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Life</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+
+        <h1>Welcome to <span class="logo">My Life</span></h1>
+    <form>
+            <label for="name">Hi! What's your first name?</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Jacob" required>
+            <button id="submitname" onclick="saveName()" type="submit">Submit</button>
+        </form>
+
+        <h3 class="hiddentext"></h3>
+        
+        <p><span class="logo">My Life</span> is a website to keep your thoughts, feelings or anything. It's very much like a journal, you can write in it however often you choose, you can look back and see what was written when. All you need to do is write a message in the box and submit it. You can't delete any you have made and everything is stored locally.</p>
+        <p>This website was made by <a href="https://jbraddez.github.io/">Jacob Bradley</a></p>
+
+        <a href="/" class="linkbutton">Take me to My Life</a>
+
+        <script>
+
+            function saveName() {
+                let name = document.getElementById('name').value;
+                if (name.length > 0 && name.trim() !== '') {
+                    localStorage.setItem('name', name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
+                    localStorage.setItem('welcomehide', 'true');
+                }
+            }
+
+            if (localStorage.getItem('welcomehide') === 'true') {
+                document.querySelector('form').style.display = 'none';
+                document.querySelector('.hiddentext').textContent = `Hi ${localStorage.getItem('name')}! Thank you for inputting your name. Continue to the next page!`;
+            }
+        </script>
+    
+</body>
+</html>
